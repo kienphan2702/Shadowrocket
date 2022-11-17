@@ -10,4 +10,4 @@ Spotify: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Spotif
 
 YouTube No Ads: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/YouTube-No-Ads/YouTube-No-Ads.sgmodule
 
-Truecaller: https://github.com/kienphan2702/Shadowrocket/blob/main/Truecaller/Modules.sgmodule
+Truecaller: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Truecaller/Modules.sgmodule
