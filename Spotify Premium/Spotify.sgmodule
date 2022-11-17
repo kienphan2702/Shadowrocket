@@ -1,0 +1,8 @@
+#!name= Spotify Premium
+#!desc= Spotify
+
+[MITM]
+hostname = %APPEND% spclient.wg.spotify.com
+
+[Script]
+spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://dl.dropboxusercontent.com/s/lubequfnh7a2ii1/Spotify.js?dl=0,script-update-interval=0
