@@ -1,5 +1,5 @@
 #!name=Truecaller Premium
-#!desc=Test Gold Subscription
+#!desc=Truecaller Gold Subscription
 
 [MITM]
 hostname = %APPEND% premium*.truecaller.com
