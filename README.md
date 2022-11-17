@@ -9,3 +9,5 @@ Nicegram: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Niceg
 Spotify: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Spotify/Spotify.sgmodule 
 
 YouTube No Ads: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/YouTube-No-Ads/YouTube-No-Ads.sgmodule
+
+Truecaller: https://github.com/kienphan2702/Shadowrocket/blob/main/Truecaller/Modules.sgmodule
