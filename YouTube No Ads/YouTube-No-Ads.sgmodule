@@ -1,0 +1,25 @@
+#!name=YouTube No Ads
+#!desc=Youtube
+
+[URL Rewrite]
+^https?:\/\/.+?\.googlevideo\.com\/.+\/videogoodput - reject
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads - reject
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking|sw.js|error_204|generate_204) - reject
+^https?:\/\/s\.youtube\.com\/api\/stats\/(qoe|watchtime|) - reject
+^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v\d\/player\/ad_break - reject
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(log_event|feedback|att|guide) - reject
+^https:\/\/www\.youtube\.com\/pcs\/activeview - reject
+
+[Rule]
+URL-REGEX,^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player,ZHS-US
+
+[Script]
+youtube-proto = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence),requires-body=1,binary-body-mode=1,max-size=3145728,script-path=https://dl.dropboxusercontent.com/s/za7dhrcy7h7f3we/youtube.js?dl=0
+youtube-fake = type=http-response,pattern=^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad,requires-body=0,script-path=https://dl.dropboxusercontent.com/s/prylmvygf6s9uk9/youtube1.js?dl=0
+
+adsinhome = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next)\?,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://dl.dropboxusercontent.com/s/ww2jxsg5evlxe88/youtube2.js?dl=0
+youtube-player = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://dl.dropboxusercontent.com/s/efblox6vdj035sb/youtube3.js?dl=0
+
+[MITM]
+hostname = %APPEND% -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,-s.youtube.com, youtubei.googleapis.com
+1
