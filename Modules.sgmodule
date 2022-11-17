@@ -8,6 +8,7 @@ hostname = %APPEND% buy.itunes.apple.com
 hostname = %APPEND% restore-access.indream.app
 hostname = %APPEND% appraven.net
 hostname = %APPEND% pool.elsanow.io
+hostname = %APPEND% premium*.truecaller.com
 enable = true
 
 
@@ -24,3 +25,5 @@ Appraven = type=http-response,pattern=^https?:\/\/appraven\.net\/AppRaven\/(app|
 
 ElsaSpeak = type=http-response,pattern=^https:\/\/pool\.elsanow\.io\/user\/api\/.+\/purchase$,requires-body=1,max-size=0,script-path=https://dl.dropboxusercontent.com/s/zvephqm7gvuzlm1/elsa-response.js?dl=0,script-update-interval=-1
 Elsa-header = type=http-request,pattern=^https:\/\/pool\.elsanow\.io\/content\/api\/.+\/modules\/download$,script-path=https://dl.dropboxusercontent.com/s/ulipkjicmq7ejko/elsa-header.js?dl=0,script-update-interval=-1
+
+Truecaller = type=http-response,pattern=^https://premium-(.+)\.truecaller\.com/v\d/subscriptions/status$,requires-body=1,max-size=0,script-path=https://dl.dropboxusercontent.com/s/lkb58ftzxwj7nh0/truecaller_fl4zccpmijionr6.js?dl=0
