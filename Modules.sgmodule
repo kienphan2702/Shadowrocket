@@ -1,5 +1,5 @@
-#!name=RevenueCat
-#!desc=RevenueCat
+#!name=Modules
+#!desc=Modules edit by PTK
 
 [MITM]
 hostname = %APPEND% api.revenuecat.com
