@@ -1,0 +1,9 @@
+#!name=RevenueCat
+#!desc=RevenueCat
+
+[MITM]
+hostname = %APPEND% api.revenuecat.com
+
+
+[Script]
+Revenuecat = type=http-response,pattern=https:\/\/api\.revenuecat\.com,requires-body=1,max-size=0,script-path=scripts/langkhach/revenuecat.js,script-update-interval=-1
