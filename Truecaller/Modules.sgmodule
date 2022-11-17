@@ -1,0 +1,8 @@
+#!name=Truecaller Premium
+#!desc=Test Gold Subscription
+
+[MITM]
+hostname = %APPEND% premium*.truecaller.com
+
+[Script]
+Truecaller = type=http-response,pattern=^https://premium-(.+)\.truecaller\.com/v\d/subscriptions/status$,requires-body=1,max-size=0,script-path=https://dl.dropboxusercontent.com/s/lkb58ftzxwj7nh0/truecaller_fl4zccpmijionr6.js?dl=0
