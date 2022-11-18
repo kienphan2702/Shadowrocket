@@ -1,0 +1,8 @@
+#!name=Revenuecat
+#!desc=Unlock Vsco, Noto, pillow, Spark mail, 1Blocker, darkroom, Planny, Widgetsmith, Grow, Anybox, vv..
+
+[MITM]
+hostname = %APPEND% api.revenuecat.com
+
+[Script]
+Revenuecat = type=http-response,pattern=https:\/\/api\.revenuecat\.com,requires-body=1,max-size=0,script-path=https://langkhach270389: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@raw.githubusercontent.com/langkhach270389/Surge-LK-Private/main/scripts/langkhach/revenuecat.js,script-update-interval=-1
