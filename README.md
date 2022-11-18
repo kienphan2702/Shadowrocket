@@ -13,3 +13,5 @@ YouTube No Ads: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main
 Truecaller: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Truecaller/truecaller.sgmodule
 
 RevenueCat: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/RevenueCat/revenuecat.sgmodule
+
+VeboTV No Ads: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/VeboTV-No-Ads/VeboTV.sgmodule
