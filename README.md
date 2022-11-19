@@ -17,3 +17,7 @@ RevenueCat: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Rev
 VeboTV No Ads: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/VeboTV-No-Ads/VeboTV.sgmodule
 
 Nhaccuatui: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Nhaccuatui/nhaccuatui.sgmodule
+
+OldRoll: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Old-Roll/oldroll.sgmodule
+
+Fimo - Analog Camera: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/FIMO-AnalogCamera/fimo.sgmodule
