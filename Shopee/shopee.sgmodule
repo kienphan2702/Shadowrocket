@@ -1,0 +1,8 @@
+#!name=Shopee++
+#!desc=Shopee cookie, coin, flashsale, Receipt, bypass 2FA
+
+[Header Rewrite]
+^https?://(mall.|)shopee.vn header-replace-regex cookie SPC_F=[a-zA-Z0-9_.-]* SPC_F=4PSQnbNRBE8JEbb7w1a5IMomP9ToVvim
+
+[MITM]
+hostname = %APPEND% mall.shopee.vn, shopee.vn
