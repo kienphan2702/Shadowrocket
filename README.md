@@ -16,4 +16,4 @@ RevenueCat: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Rev
 
 VeboTV No Ads: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/VeboTV-No-Ads/VeboTV.sgmodule
 
-Nhaccuatui: https://github.com/kienphan2702/Shadowrocket/blob/main/Nhaccuatui/nhaccuatui.sgmodule
+Nhaccuatui: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Nhaccuatui/nhaccuatui.sgmodule
