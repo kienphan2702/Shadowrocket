@@ -15,3 +15,5 @@ Truecaller: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Tru
 RevenueCat: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/RevenueCat/revenuecat.sgmodule
 
 VeboTV No Ads: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/VeboTV-No-Ads/VeboTV.sgmodule
+
+Nhaccuatui: https://github.com/kienphan2702/Shadowrocket/blob/main/Nhaccuatui/nhaccuatui.sgmodule
