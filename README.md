@@ -21,3 +21,5 @@ Nhaccuatui: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Nha
 OldRoll: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Old-Roll/oldroll.sgmodule
 
 Fimo - Analog Camera: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/FIMO-AnalogCamera/fimo.sgmodule
+
+Filmr PRO: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Filmr/filmr.sgmodule
