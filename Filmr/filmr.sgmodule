@@ -1,0 +1,7 @@
+#!name=Filmr
+#!desc=Filmr PRO
+
+[MITM]
+hostname = %APPEND% payments.invideo.io
+[Script]
+Filmr = type=http-response,pattern=https://payments.invideo.io/verify_purchase,requires-body=1,max-size=0,script-path=scripts/langkhach/verify_receipt.js,script-update-interval=-1
