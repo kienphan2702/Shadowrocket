@@ -1,16 +1,9 @@
-#!name=Picsart
-#!desc=Picsart Gold
+#!name=Picsart Gold
+#!desc=Picsart
 
 [Script]
-<<<<<<< HEAD
 picart = type=http-response,script-path=https://dl.dropboxusercontent.com/s/dd89shkq3bbe0zj/Picsart.json?dl=0,pattern=^https://api.picsart.com/shop/subscription/apple/purchases,max-size=131072,requires-body=true,timeout=10,enable=true
 funimate = type=http-response,script-path=https://dl.dropboxusercontent.com/s/zofmxhsjr5isdh2/Funimate.json?dl=0,pattern=^https:\/\/api\.funimate\.com\/users\/me,max-size=131072,requires-body=true,timeout=10,enable=true
 
 [MITM]
 hostname = api.picsart.com
-=======
-Picsart = type=http-response,pattern=^https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Picsart/picsart.js
-
-[MITM]
-hostname = %APPEND% api.picsart.c*, api.meiease.c*
->>>>>>> 5b7aedb86f0527f117dae587342eecec1b749594
