@@ -8,7 +8,7 @@ const list = {
 	'Anybox': { name: 'pro', id: 'cc.anybox.Anybox.annual' }
 };
 const data = {
-	"expires_date": "2099-02-18T07:52:54Z",
+	"expires_date": "2099-02-27T07:52:54Z",
 	"original_purchase_date": "2020-02-11T07:52:55Z",
 	"purchase_date": "2020-02-11T07:52:54Z"
 };
