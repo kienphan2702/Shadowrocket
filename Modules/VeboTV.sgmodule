@@ -2,7 +2,7 @@
 #!desc=VeboTV remove Ads
 
 [Script]
-VeboTV = type=http-request,pattern=^https:\/\/api*\.(fb(data|hub)|vebo)\.xyz(\/*)v\d\/config\/ios,requires-body=0,script-path=https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/VeboTV-No-Ads/VeboTV.js
+VeboTV = type=http-request,pattern=^https:\/\/api*\.(fb(data|hub)|vebo)\.xyz(\/*)v\d\/config\/ios,requires-body=0,script-path=https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Javascript/VeboTV.js
 
 [MITM]
 hostname = %APPEND% *.fbdata.xyz, *.fbhub.xyz, *.vebo.xyz
