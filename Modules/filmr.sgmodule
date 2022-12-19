@@ -4,5 +4,5 @@
 [MITM]
 hostname = %APPEND% payments.invideo.io
 [Script]
-Filmr = type=http-response,pattern=https://payments.invideo.io/verify_purchase,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Filmr/filmr.js,script-update-interval=-1
-Filmr = type=http-response,pattern=https://payments.invideo.io/subscription,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Filmr/filmr.js,script-update-interval=-1
+Filmr = type=http-response,pattern=https://payments.invideo.io/verify_purchase,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Javascript/filmr.js,script-update-interval=-1
+Filmr = type=http-response,pattern=https://payments.invideo.io/subscription,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Javascript/filmr.js,script-update-interval=-1
