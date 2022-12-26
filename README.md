@@ -11,3 +11,5 @@ OldRoll VIP: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Mo
 Nhaccuatui VIP: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Modules/nhaccuatui.sgmodule
 
 Nicegram Premium: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Modules/nicegram.sgmodule
+
+Fimo PRO: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Modules/fimo.sgmodule
