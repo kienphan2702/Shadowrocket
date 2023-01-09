@@ -1,5 +1,6 @@
 Config
-Adblock: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/adblock.conf
+
+Adblock: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/config.conf
 
 Modules
 
