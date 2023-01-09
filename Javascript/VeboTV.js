@@ -6,7 +6,7 @@ let obj = {
     "app": {
       "can_skip_update": true,
       "app_url": "https://vebotv.app/",
-      "contact": "No Ads by PTK",
+      "contact": "app@vebotv.app",
       "share_content": "Xem bóng đá",
       "version": 1,
       "notice_update": false,
