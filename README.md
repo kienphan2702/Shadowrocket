@@ -1,3 +1,6 @@
+Config
+Adblock: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/adblock.conf
+
 Modules
 
 VeboTV No Ads: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Modules/VeboTV.sgmodule
