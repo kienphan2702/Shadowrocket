@@ -1,5 +1,5 @@
 #!name=YouTube
-#!desc=Youtube remove Ads
+#!desc=Youtube No Ads
 
 [URL Rewrite]
 ^https?:\/\/.+?\.googlevideo\.com\/.+\/videogoodput - reject
