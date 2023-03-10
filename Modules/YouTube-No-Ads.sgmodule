@@ -14,11 +14,11 @@
 URL-REGEX,^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player,ZHS-US
 
 [Script]
-youtube-proto = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence),requires-body=1,binary-body-mode=1,max-size=3145728,script-path=https://dl.dropboxusercontent.com/s/za7dhrcy7h7f3we/youtube.js?dl=0
-youtube-fake = type=http-response,pattern=^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad,requires-body=0,script-path=https://dl.dropboxusercontent.com/s/prylmvygf6s9uk9/youtube1.js?dl=0
+youtube-proto = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence),requires-body=1,binary-body-mode=1,max-size=3145728,script-path=https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Javascript/youtube.js
+youtube-fake = type=http-response,pattern=^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad,requires-body=0,script-path=https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Javascript/youtube1.js
 
-adsinhome = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next)\?,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://dl.dropboxusercontent.com/s/ww2jxsg5evlxe88/youtube2.js?dl=0
-youtube-player = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://dl.dropboxusercontent.com/s/efblox6vdj035sb/youtube3.js?dl=0
+adsinhome = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next)\?,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Javascript/youtube2.js
+youtube-player = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Javascript/youtube3.js
 
 [MITM]
 hostname = %APPEND% -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,-s.youtube.com, youtubei.googleapis.com
