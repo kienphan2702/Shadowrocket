@@ -22,4 +22,3 @@ youtube-player = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com
 
 [MITM]
 hostname = %APPEND% -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,-s.youtube.com, youtubei.googleapis.com
-1
