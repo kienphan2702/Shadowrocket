@@ -34,6 +34,6 @@ if (typeof $response == "undefined") {
 			break;
 		}
 	}
-	resp.body = JSON.stringify(obj).replace(/\"expires_date\":\"\w{4}/g, "\"expires_date\":\"2089").replace(/\"period_type\":\"\w+\"/g, "\"period_type\":\"active\"");
+	resp.body = JSON.stringify(obj).replace(/\"expires_date\":\"\w{4}/g, "\"expires_date\":\"9999").replace(/\"period_type\":\"\w+\"/g, "\"period_type\":\"active\"");
 }
 $done(resp);
