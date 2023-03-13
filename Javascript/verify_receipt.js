@@ -1,4 +1,4 @@
-re('("expires_date"):"\\w{4}@("expires_date_pst"):"\\w{4}@("expires_date_ms"):"\\w+"','$1:"2099@$1:"2099@$1:"4096019658000"');
+re('("expires_date"):"\\w{4}@("expires_date_pst"):"\\w{4}@("expires_date_ms"):"\\w+"@("is_trial_period"):"\\w+"','$1:"2099@$1:"2099@$1:"4096019658000"@$1:"false"');
 function re() {
 var body = $response.body;
 if(!body){
