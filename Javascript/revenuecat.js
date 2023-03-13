@@ -8,10 +8,13 @@ const list = {
 	'Anybox': { name: 'pro', id: 'cc.anybox.Anybox.annual' },
 	'Fileball': { name: 'filebox_pro', id: 'com.premium.yearly' },
 	'ipTV': { name: 'ipTV +', id: 'iptv_9.99_1y_7d_free' },
-		'Speechify': { name: 'pro', id: 'com.cliffweitzman.speechifyMobile2.premium.annual' }
+	'APTV': { name: 'pro', id: 'com.kimen.aptvpro.lifetime' },
+	'Blink': { name: 'pro', id: 'blink_shell_plus_1y_1999' },
+        'mizframa': { name: 'premium', id: 'mf_20_lifetime2' },
+        'CallRecorder': { name: 'subscriptions', id: 'com.prettyboa.CallRecorder.MonthlySubscription2999' }
 };
 const data = {
-	"expires_date": "2099-02-27T07:52:54Z",
+	"expires_date": "2099-02-18T07:52:54Z",
 	"original_purchase_date": "2020-02-11T07:52:55Z",
 	"purchase_date": "2020-02-11T07:52:54Z"
 };
@@ -31,6 +34,6 @@ if (typeof $response == "undefined") {
 			break;
 		}
 	}
-	resp.body = JSON.stringify(obj).replace(/\"expires_date\":\"\w{4}/g, "\"expires_date\":\"2099").replace(/\"period_type\":\"\w+\"/g, "\"period_type\":\"active\"");
+	resp.body = JSON.stringify(obj).replace(/\"expires_date\":\"\w{4}/g, "\"expires_date\":\"2089").replace(/\"period_type\":\"\w+\"/g, "\"period_type\":\"active\"");
 }
 $done(resp);
