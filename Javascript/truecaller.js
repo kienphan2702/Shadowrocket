@@ -19,7 +19,7 @@ var obj;
 switch ($request.url) {
   case findUrl(/subscriptions\/status/):
       obj = {
-        expire: "2099-12-31T11:20:25Z",
+        expire: "9999-09-09T11:20:25Z",
         start: "2022-02-27T11:20:25Z",
         paymentProvider: "Apple",
         isExpired: false,
