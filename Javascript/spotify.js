@@ -116,4 +116,3 @@ function deepCopy(data, hash = new WeakMap()) {
     });
     return newData;
 }
-1
