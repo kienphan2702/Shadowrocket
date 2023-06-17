@@ -1,0 +1,8 @@
+#!name=followers
+#!desc=Spotify Premium
+
+[MITM]
+hostname = %APPEND% api.socialhue.io
+
+[Script]
+Spotify-Premium = type=http-response,pattern=^https:\/\/api\.socialhue\.io\/analytics\purchase$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Javascript/spotify.js,script-update-interval=0
