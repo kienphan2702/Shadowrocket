@@ -1,7 +1,7 @@
-var objc = JSON.parse($response.body);
-      
-    objc = 
+var body = $response.body;
+var objc = JSON.parse(body);
 
+objc =
 {
   "account": {
     "account_id": 3744771,
@@ -15,4 +15,7 @@ var objc = JSON.parse($response.body);
   }
 }
 
-$done({body : JSON.stringify(objc)});
+body = JSON.stringify(objc);
+$done({ 
+    body 
+});
