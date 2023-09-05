@@ -5,4 +5,4 @@
 hostname = %APPEND% filmicpro.oracle.bendingspoonsapps.com
 
 [Script]
-Filmic = type=http-response,pattern=^https:\/\/filmicpro\.oracle\.bendingspoonsapps\.com\/v\d\/users\/,max-size=131072,requires-body=true,timeout=10,script-path=https://gitlab.com/ohoang7/ohb/-/raw/main/Script/filmicpro.js,script-update-interval=0,enable=true
+Filmic = type=http-response,pattern=^https:\/\/filmicpro\.oracle\.bendingspoonsapps\.com\/v\d\/users\/,max-size=131072,requires-body=true,timeout=10,script-path=https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Javascript/filmic.js,script-update-interval=0,enable=true
