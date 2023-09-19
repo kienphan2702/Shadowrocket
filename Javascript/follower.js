@@ -11,7 +11,7 @@ objc =
   },
   "Action": {
     "ActionType": "toast",
-    "ActionMessage": "09 Sep 2099"
+    "ActionMessage": "Unlocked by PTK"
   }
 }
 
