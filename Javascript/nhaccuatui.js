@@ -3,7 +3,7 @@ let url = $request.url;
 const user = "users/info";
 if(url.indexOf(user) != -1)
 {
-"vipExpire": "09.09.9999";
-"isVIP": true;
+obj.data.vipExpire= "09.09.9999";
+obj.data.isVIP= true;
 }
 $done({body: JSON.stringify(obj)});
