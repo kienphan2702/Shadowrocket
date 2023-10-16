@@ -11,7 +11,7 @@ objc =
   },
   "Action": {
     "ActionType": "toast",
-    "ActionMessage": "Unlocked by Kiên Phan"
+    "ActionMessage": "Unlocked by PTK"
   }
 }
 
