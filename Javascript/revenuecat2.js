@@ -7,12 +7,12 @@
 > TgChannel         https://t.me/ddgksf2021
 > Contribute        https://t.me/ddgksf2013_bot
 > Feedback          📮 ddgksf2013@163.com 📮
-> UpdateTime        2024-01-12
+> UpdateTime        2024-01-25
 > Suitable          自行观看“# > ”注释内容，解锁是暂时的，购买也不是永久的[订阅、跑路]
 > Attention         如需引用请注明出处，谢谢合作！
 > ScriptURL         https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js
 
-# ========Apps======== #
+# ========解锁列表======== #
 # > 001 白云天气
 https://apps.apple.com/cn/app/id1575901953
 # > 002 1Blocker
@@ -223,6 +223,36 @@ https://apps.apple.com/cn/app/id6462117466
 https://apps.apple.com/us/app/id1605113008
 # > 105 Moze
 https://apps.apple.com/cn/app/id1460011387
+# > 106 AlcoholTracker
+https://apps.apple.com/cn/app/id6448653224
+# > 107 pycopaste
+https://apps.apple.com/us/app/id1635345871
+# > 108 Lilbite
+https://apps.apple.com/cn/app/id1581072935
+# > 109 Anymoney
+https://apps.apple.com/cn/app/id1310569778
+# > 110 yawn
+https://apps.apple.com/cn/app/id6473270731
+# > 111 nasctl
+https://apps.apple.com/cn/app/id1662428698
+# > 112 neurolist
+https://apps.apple.com/us/app/id6468689182
+# > 113 西江诗词
+https://apps.apple.com/us/app/id1084924739
+# > 114 geist
+https://apps.apple.com/cn/app/id897062509
+# > 115 Budgetflow
+https://apps.apple.com/us/app/id1640091876
+# > 116 Habitdone
+https://apps.apple.com/us/app/id6475660703
+# > 117 Weatherkit
+https://apps.apple.com/us/app/id1076414499
+# > 118 Timus
+https://apps.apple.com/us/app/id6461119151
+# > 119 napbot
+https://apps.apple.com/us/app/id1476436116
+# > 120 amie
+https://apps.apple.com/cn/app/id1548277133
 
 
 [rewrite_local]
@@ -243,6 +273,7 @@ hostname=api.revenuecat.com
 // ========= 动态ID ========= //
 const mapping = {
   '%E8%BD%A6%E7%A5%A8%E7%A5%A8': ['vip+watch_vip'],
+  'FinancialNote': ['category'],
   'LUTCamera': ['ProVersion', 'com.uzero.funforcam.monthlysub'],
   'totowallet': ['all', 'com.ziheng.totowallet.yearly'],
   'Aphrodite': ['all'],
@@ -324,8 +355,13 @@ const mapping = {
   'Cookie': ['allaccess','app.ft.Bookkeeping.lifetime'],
   'ScientificCalculator': ['premium','com.simpleinnovation.calculator.ai.premium.yearly.base'],
   'MOZE': ['premium'],
-  'Focused%20Work': ['Pro'],
+  'alcohol.tracker': ['pro','drinklog_lifetime'],
+  'DayPoem': ['Pro Lifetime'],
+  'Budget%20Flow': ['full_access','com.fabian.hasse.haushaltsbuch.upgrade.combined'],
   'G%20E%20I%20S%20T': ['memorado_premium'],
+  'multitimer_app': ['premium','timus_lt'],
+  'tiimo': ['full_access'],
+  'Focused%20Work': ['Pro'],
   'Email%20Me': ['premium'],
   'Alpenglow': ['newPro'],
   'Darkroom': ['co.bergen.Darkroom.entitlement.allToolsAndFilters']
