@@ -15,9 +15,9 @@ const list = {
 	'Locket': { name: 'Gold', id: 'locket_3600_1y'}
 };
 const data = {
-	"expires_date": "9999-09-09T07:52:54Z",
+	"expires_date": "2099-09-09T07:52:54Z",
 	"original_purchase_date": "2002-02-27T07:52:55Z",
-	"purchase_date": "2002-02-27T07:52:54Z"
+	"purchase_date": "2020-02-27T07:52:54Z"
 };
 
 if (typeof $response == "undefined") {
