@@ -11,8 +11,9 @@ const list = {
 	'APTV': { name: 'pro', id: 'com.kimen.aptvpro.lifetime' },
 	'Blink': { name: 'pro', id: 'blink_shell_plus_1y_1999' },
         'mizframa': { name: 'premium', id: 'mf_20_lifetime2' },
-        'CallRecorder': { name: 'subscriptions', id: 'com.prettyboa.CallRecorder.MonthlySubscription2999' }
-	'Locket': { name: 'Gold', id: 'locket_3600_1y'}
+        'CallRecorder': { name: 'subscriptions', id: 'com.prettyboa.CallRecorder.MonthlySubscription2999' },
+	'Locket': { name: 'Gold', id: 'locket_3600_1y'},
+	'World Clock': { name: 'purchase', id: 'com.overdesigned.worldclock.removeads1' }
 };
 const data = {
 	"expires_date": "2099-09-09T07:52:54Z",
