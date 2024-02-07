@@ -12,11 +12,12 @@ const list = {
 	'Blink': { name: 'pro', id: 'blink_shell_plus_1y_1999' },
         'mizframa': { name: 'premium', id: 'mf_20_lifetime2' },
         'CallRecorder': { name: 'subscriptions', id: 'com.prettyboa.CallRecorder.MonthlySubscription2999' }
+	'Locket': { name: 'Gold', id: 'locket_3600_1y'}
 };
 const data = {
-	"expires_date": "2099-02-18T07:52:54Z",
-	"original_purchase_date": "2020-02-11T07:52:55Z",
-	"purchase_date": "2020-02-11T07:52:54Z"
+	"expires_date": "9999-09-09T07:52:54Z",
+	"original_purchase_date": "2002-02-27T07:52:55Z",
+	"purchase_date": "2002-02-27T07:52:54Z"
 };
 
 if (typeof $response == "undefined") {
