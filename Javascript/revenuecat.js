@@ -15,7 +15,8 @@ const list = {
 	'Locket': { name: 'Gold', id: 'locket_3600_1y' },
 	'Currency': { name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.plus' },
 	'Forza Football': { name: 'Forza Legend', id: 'com.forzafootball.subscription.discounted_yearly' },
-	'IPCams': { name: 'family', id: 'ipcams_pro_plus_yearly' }
+	'IPCams': { name: 'family', id: 'ipcams_pro_plus_yearly' },
+	'Widgetsmith': { name: 'Premium', id: 'PremiumAnnualWidget' }
 };
 const data = {
 	"expires_date": "2099-09-09T07:52:54Z",
