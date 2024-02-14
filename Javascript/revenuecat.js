@@ -17,7 +17,8 @@ const list = {
 	'Forza Football': { name: 'Forza Legend', id: 'com.forzafootball.subscription.discounted_yearly' },
 	'IPCams': { name: 'family', id: 'ipcams_pro_plus_yearly' },
 	'Widgetsmith': { name: 'Premium', id: 'PremiumAnnualWidget' },
-	'World Clock': { name: 'lifetime-unlock', id: 'com.overdesigned.worldclock.removeads1' }
+	'World Clock': { name: 'lifetime-unlock', id: 'com.overdesigned.worldclock.removeads1' },
+	'Electrical Calculation': { name: 'pro', id: 'electricalcalculations.pro.1year' }
 };
 const data = {
 	"expires_date": "2099-09-09T07:52:54Z",
