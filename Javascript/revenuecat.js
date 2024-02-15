@@ -18,7 +18,8 @@ const list = {
 	'IPCams': { name: 'family', id: 'ipcams_pro_plus_yearly' },
 	'Widgetsmith': { name: 'Premium', id: 'PremiumAnnualWidget' },
 	'World Clock': { name: 'lifetime-unlock', id: 'com.overdesigned.worldclock.removeads1' },
-	'Photomator': { name: 'pixelmator_photo_pro_access', id: 'pixelmator_photo_yearly_v1' }
+	'Photomator': { name: 'pixelmator_photo_pro_access', id: 'pixelmator_photo_yearly_v1' },
+	'StepsApp': { name: 'stepsapp_pedometer_premium_1_year', id: 'app.steps.stepsapp.premium.yearTrial.tier1' }
 };
 const data = {
 	"expires_date": "2099-09-09T07:52:54Z",
