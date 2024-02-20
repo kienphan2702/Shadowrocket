@@ -14,7 +14,7 @@ const list = {
         'CallRecorder': { name: 'subscriptions', id: 'com.prettyboa.CallRecorder.MonthlySubscription2999' },
 	'Locket': { name: 'Gold', id: 'locket_3600_1y' },
 	'Currency': { name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.plus' },
-	'Forza Football': { name: 'Forza Legend', id: 'com.forzafootball.subscription.discounted_yearly' },
+	'Forza Football': { name: 'Forza Legend', id: 'com.forzafootball.subscription.discounted_monthly' },
 	'IPCams': { name: 'family', id: 'ipcams_pro_plus_yearly' },
 	'Widgetsmith': { name: 'Premium', id: 'PremiumAnnualWidget' },
 	'World Clock': { name: 'lifetime-unlock', id: 'com.overdesigned.worldclock.removeads1' },
