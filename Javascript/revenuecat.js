@@ -22,7 +22,8 @@ const list = {
 	'StepsApp': { name: 'stepsapp_pedometer_premium_1_year', id: 'app.steps.stepsapp.premium.yearTrial.tier1' },
 	'PhotoRoom': { name: 'business', id: 'com.background.business.yearly' },
 	'Planny': { name: 'premium', id: 'com.kevinreutter.Sagittarius.PremiumLifetime' },
-	'NextMatch': { name: '$rc_lifetime', id: 'nm_199_lifetime' }
+	'NextMatch': { name: '$rc_lifetime', id: 'nm_199_lifetime' },
+	'Splyt': { name: 'Pro', id: 'splyt_plus_3999_1y' }
 };
 const data = {
 	"expires_date": "2099-09-09T07:52:54Z",
