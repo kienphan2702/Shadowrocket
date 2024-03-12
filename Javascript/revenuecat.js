@@ -24,7 +24,7 @@ const list = {
 	'Planny': { name: 'premium', id: 'com.kevinreutter.Sagittarius.PremiumLifetime' },
 	'NextMatch': { name: '$rc_lifetime', id: 'nm_199_lifetime' },
 	'Splyt': { name: 'Pro', id: 'splyt_plus_3999_1y' },
-	'Barcode': { name: 'Unlimited', id: 'com.barcodesapp.yearly' }
+	'Barcodes': { name: 'Unlimited', id: 'com.barcodesapp.yearly' }
 };
 const data = {
 	"expires_date": "2099-02-27T07:52:54Z",
