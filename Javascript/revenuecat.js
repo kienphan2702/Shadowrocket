@@ -27,7 +27,8 @@ const list = {
 	'Barcodes': { name: 'Unlimited', id: 'com.barcodesapp.yearly' },
 	'Scanner Pro': { name: 'plus', id: 'com.readdle.Scanner.subscription.year30' },
 	'Pandora': { name: '$rc_annual', id: 'com.ziheng.pandora.yearly' },
-	'Mojo': { name: 'pro', id: 'video.mojo.pro.yearly' }
+	'Mojo': { name: 'pro', id: 'video.mojo.pro.yearly' },
+	'Color Widget': { name: '$rc_annual', id: 'cw_1999_1y_3d0' }
 };
 const data = {
 	"expires_date": "2099-09-09T07:52:54Z",
