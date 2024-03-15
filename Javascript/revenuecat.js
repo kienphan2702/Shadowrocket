@@ -26,7 +26,8 @@ const list = {
 	'Splyt': { name: 'Pro', id: 'splyt_plus_3999_1y' },
 	'Barcodes': { name: 'Unlimited', id: 'com.barcodesapp.yearly' },
 	'Scanner Pro': { name: 'plus', id: 'com.readdle.Scanner.subscription.year30' },
-	'Pandora': { name: '$rc_annual', id: 'com.ziheng.pandora.yearly' }
+	'Pandora': { name: '$rc_annual', id: 'com.ziheng.pandora.yearly' },
+	'Mojo': { name: 'pro', id: 'video.mojo.pro.yearly' }
 };
 const data = {
 	"expires_date": "2099-09-09T07:52:54Z",
