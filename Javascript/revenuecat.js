@@ -24,7 +24,7 @@ const list = {
 	'Planny': { name: 'premium', id: 'com.kevinreutter.Sagittarius.PremiumLifetime' },
 	'NextMatch': { name: '$rc_lifetime', id: 'nm_199_lifetime' },
 	'Splyt': { name: 'Pro', id: 'splyt_plus_3999_1y' },
-	'Barcodes': { name: 'Unlimited', id: 'com.barcodesapp.yearly' },
+	'Barcodes': { name: 'Unlimited', id: 'com.barcodesapp.lifetime' },
 	'Scanner Pro': { name: 'plus', id: 'com.readdle.Scanner.subscription.year30' },
 	'Pandora': { name: '$rc_annual', id: 'com.ziheng.pandora.yearly' },
 	'Mojo': { name: 'pro', id: 'video.mojo.pro.yearly' },
