@@ -29,7 +29,8 @@ const list = {
 	'Pandora': { name: '$rc_annual', id: 'com.ziheng.pandora.yearly' },
 	'Mojo': { name: 'pro', id: 'video.mojo.pro.yearly' },
 	'Color Widget': { name: 'pro', id: 'cw_1999_1y_3d0' },
-	'HoursTracker': { name: 'Unlimited', id: 'hourstracker_unlimited_4799_1y_1w0' }
+	'HoursTracker': { name: 'Unlimited', id: 'hourstracker_unlimited_4799_1y_1w0' },
+	'Sono': { name: 'Premium', id: 'sono_1y_2w0' }
 };
 const data = {
 	"expires_date": "2099-09-09T07:52:54Z",
