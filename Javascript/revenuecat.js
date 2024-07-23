@@ -31,7 +31,9 @@ const list = {
 	'Color Widget': { name: 'pro', id: 'cw_1999_1y_3d0' },
 	'HoursTracker': { name: 'Unlimited', id: 'hourstracker_unlimited_4799_1y_1w0' },
 	'Sono': { name: 'Premium', id: 'sono_1y_2w0' },
-	'Hours Tracker': { name: 'PURCHASED', id: 'com.appostrophe.hourstracker.subscription.premium_yearly_2999' }
+	'Hours Tracker': { name: 'PURCHASED', id: 'com.appostrophe.hourstracker.subscription.premium_yearly_2999' },
+	'Electrical': { name: 'PURCHASED', id: 'electricalcalculations.pro.lifetime' }
+	
 };
 const data = {
 	"expires_date": "2099-09-09T07:52:54Z",
