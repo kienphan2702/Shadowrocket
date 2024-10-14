@@ -32,7 +32,8 @@ const list = {
 	'HoursTracker': { name: 'Unlimited', id: 'hourstracker_unlimited_4799_1y_1w0' },
 	'Sono': { name: 'Premium', id: 'sono_1y_2w0' },
 	'Hours Tracker': { name: 'PURCHASED', id: 'com.appostrophe.hourstracker.subscription.premium_yearly_2999' },
-	'Electrical': { name: 'PURCHASED', id: 'electricalcalculations.pro.lifetime' }
+	'Electrical': { name: 'PURCHASED', id: 'electricalcalculations.pro.lifetime' },
+	'Binsoo': { name: 'annual', id: '$RCAnonymousID:2d4482fc40b140f8be9045943614edac' }
 	
 };
 const data = {
