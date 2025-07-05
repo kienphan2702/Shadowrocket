@@ -34,7 +34,7 @@ const list = {
 	'Hours Tracker': { name: 'PURCHASED', id: 'com.appostrophe.hourstracker.subscription.premium_yearly_2999' },
 	'Electrical': { name: 'PURCHASED', id: 'electricalcalculations.pro.lifetime' },
 	'Binsoo': { name: 'annual', id: '$RCAnonymousID:2d4482fc40b140f8be9045943614edac' },
-	'FotMob': { name: 'FotMob+', id: 'fotmob_membership_3m' },
+	'FotMob': { name: 'FotMob+', id: 'fotmob_membership_1y' },
 	'Paste Keyboard': { name: '$rc_lifetime', id: 'com.tmsaeapp.copypastekeyboard.removeads' }
 	
 };
