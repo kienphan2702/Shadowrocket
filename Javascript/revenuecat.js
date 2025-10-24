@@ -1,13 +1,3 @@
-*******************************
-[rewrite_local]
-
-https://api.revenuecat.com/v1/(receipts|subscribers)/* url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Currency.js
-
-[mitm] 
-
-hostname = api.revenuecat.com
-*******************************/
-
 const resp = {};
 const obj = JSON.parse(typeof $response != "undefined" && $response.body || null);
 
