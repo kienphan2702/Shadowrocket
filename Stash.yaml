@@ -43,23 +43,24 @@ http:
       type: response
 
     # 3. RevenueCatDeleteHeader (xoá header gửi lên RevenueCat)
-    - name: RevenueCatDeleteHeader
-      type: request
-      match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$)
+    - argument: null
       binary-mode: true
-      argument: null
-      max-size: null
-      timeout: 60
-
-    # 4. OldRoll
-    - name: OldRoll
-      type: response
-      match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+      match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers)
+      name: RevenuecatDeleteHeader
       require-body: true
       binary-mode: true
-      argument: null
-      max-size: 0
-      timeout: 60
+      timeout: 10
+      type: request
+
+    # 4. OldRoll
+    - argument: null
+      binary-mode: true
+      match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+      name: OldRoll
+      require-body: true
+      binary-mode: true
+      timeout: 10
+      type: response
 
   rewrite:
     - '(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302'
