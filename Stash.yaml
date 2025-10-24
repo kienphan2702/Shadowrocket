@@ -13,7 +13,7 @@ proxy-groups:
 # HTTP engine
 http:
   mitm:
-    - "redirector*.googlevideo.com"
+    - "-redirector*.googlevideo.com"
     - "*.googlevideo.com"
     - "www.youtube.com"
     - "s.youtube.com"
@@ -23,10 +23,11 @@ http:
 
   script:
     # 1. Script YouTube Premium
-    - match: ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/(v\d+\/)?(player|browse|next|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch)
+    - match: ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch)
       name: YouTubeNoAds
       type: response
       require-body: true
+      binary-mode: true
       timeout: 10
 
     # 2. Script Revenuecat
@@ -34,7 +35,6 @@ http:
       name: Revenuecat1
       type: response
       require-body: true
-      binary-mode: true
       timeout: 10
       
     # 3. DeleteHeaderRevenueCat
