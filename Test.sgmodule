@@ -1,8 +1,0 @@
-#!name=1998Cam
-#!desc=vip
-
-[MITM]
-hostname = %APPEND% in.appcenter.ms
-
-[Script]
-Test = type=http-response,pattern=^https:\/\/in\.appcenter\.ms\/log/?api-version=1.0.0$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/proxyman.js,script-update-interval=0
