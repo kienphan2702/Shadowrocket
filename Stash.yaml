@@ -30,12 +30,10 @@ http:
       timeout: 10
 
     # 2. Script Revenuecat
-    - match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$)
+    - match: https://api.revenuecat.com/v1/(receipts|subscribers)/*
       name: Revenuecat
       type: response
       require-body: true
-      binary-mode: true
-      script-path: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Javascript/revenuecat.js
       timeout: 10
 
   rewrite:
