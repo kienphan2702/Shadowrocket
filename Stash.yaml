@@ -63,7 +63,6 @@ dns:
     - 1.1.1.1
   skip-cert-verify: true
   nameserver:
-    - https://dns.nextdns.io/a72ee5
 
 log-level: info
 mode: rule
