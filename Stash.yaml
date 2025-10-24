@@ -34,7 +34,7 @@ http:
     # 2. Script Revenuecat
     - argument: null
       binary-mode: true
-      match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$)
+      match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts(?:\?.*)?$|subscribers\/[^\/]+(?:\?.*)?$)
       max-size: null
       name: Revenuecat
       require-body: true
@@ -53,12 +53,13 @@ script-providers:
     url: https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js
     interval: 86400
   Revenuecat:
-    url: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/refs/heads/main/Javascript/revenuecat.js
+    url: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Javascript/revenuecat.js
     interval: 86400
 
 rules:
   - GEOSITE,youtube,YouTube
-  - MATCH,Revenuecat
+  - DOMAIN-SUFFIX,api.revenuecat.com,Revenuecat
+  - MATCH,DIRECT
 
 dns:
   default-nameserver:
