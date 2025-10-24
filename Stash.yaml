@@ -74,12 +74,20 @@ script-providers:
 
 rules:
   - GEOSITE,youtube,YouTube
-  - MATCH,Revenuecat1
+  - DOMAIN,api.revenuecat.com,DIRECT
+  - DOMAIN-SUFFIX,revenuecat.com,DIRECT
+  - MATCH,DIRECT
+
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
 
 dns:
   default-nameserver:
-    - 114.114.114.114
     - 1.1.1.1
+    - 114.114.114.114
   skip-cert-verify: true
   nameserver:
 
