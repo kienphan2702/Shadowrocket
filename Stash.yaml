@@ -39,7 +39,7 @@ http:
 
     # 3. DeleteHeaderRevenueCat
     - match: https://api.revenuecat.com/v1/(receipts|subscribers)/*
-      name: Revenuecat1
+      name: DeleteHeader
       type: response
       require-body: true
       timeout: 10
