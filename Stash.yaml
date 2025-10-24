@@ -30,11 +30,12 @@ http:
       timeout: 10
 
     # 2. Script Revenuecat
-    - match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$)
+    - match: ^https?:\/\/api\.revenuecat\.com\/v\d\/(receipts|subscribers)\/
       name: Revenuecat
       type: response
       require-body: true
       binary-mode: true
+      script-path: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/refs/heads/main/Javascript/revenuecat-stash.js
       timeout: 10
 
   rewrite:
@@ -49,7 +50,7 @@ script-providers:
     url: https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js
     interval: 86400
   Revenuecat:
-    url: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Javascript/revenuecat.js
+    url: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/refs/heads/main/Javascript/revenuecat-stash.js
     interval: 86400
 
 rules:
