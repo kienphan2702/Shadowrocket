@@ -33,7 +33,7 @@ http:
     # 2. Script Revenuecat
     - match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$)
       name: Revenuecat1
-      type: response
+      type: request
       require-body: true
       timeout: 10
       script: |
