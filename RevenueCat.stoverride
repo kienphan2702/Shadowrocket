@@ -1,0 +1,15 @@
+name: RevenueCat
+desc: Unlock RevenueCat
+http:
+  mitm:
+    - "api.revenuecat.com"
+  script:
+    - match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$)
+      name: Revenue-Cat
+      type: response
+      require-body: true
+      timeout: 10
+script-providers:
+  Revenue-Cat:
+    url: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Javascript/revenuecat.js
+    interval: 86400
