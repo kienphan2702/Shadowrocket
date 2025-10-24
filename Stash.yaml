@@ -21,25 +21,21 @@ http:
     - "api.revenuecat.com"
 
   script:
-    # 1. Script chặn quảng cáo YouTube
-    - argument: null
-      binary-mode: true
-      match: ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/(v\d+\/)?(player|browse|next|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch)
-      max-size: null
+    # 1. Script YouTube Premium
+    - match: ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/(v\d+\/)?(player|browse|next|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch)
       name: YouTubeNoAds
-      require-body: true
-      timeout: 10
       type: response
+      require-body: true
+      binary-mode: true
+      timeout: 10
 
     # 2. Script Revenuecat
-    - argument: null
-      binary-mode: true
-      match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$)
-      max-size: null
+    - match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$)
       name: Revenuecat
-      require-body: true
-      timeout: 10
       type: response
+      require-body: true
+      binary-mode: true
+      timeout: 10
 
   rewrite:
     - '(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302'
@@ -58,8 +54,7 @@ script-providers:
 
 rules:
   - GEOSITE,youtube,YouTube
-  - DOMAIN-SUFFIX,api.revenuecat.com,Revenuecat
-  - MATCH,DIRECT
+  - MATCH,Revenuecat
 
 dns:
   default-nameserver:
