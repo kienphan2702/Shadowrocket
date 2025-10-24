@@ -1,7 +1,6 @@
-// Stash-compatible RevenueCat unlocker
-
+// revenuecat-stash.js — Stash compatible, clean version
 export default async function (request, response) {
-  const ua = request.headers["User-Agent"] || request.headers["user-agent"];
+  const ua = request.headers["User-Agent"] || request.headers["user-agent"] || "";
   const list = {
     "VSCO": { name: "membership", id: "com.circles.fin.premium.yearly" },
     "1Blocker": { name: "premium", id: "blocker.ios.subscription.yearly" },
@@ -45,25 +44,24 @@ export default async function (request, response) {
     "request_date": "2020-02-27T07:52:54Z"
   };
 
+  // Remove RevenueCat ETag
   if (!response) {
-    // Request phase
     delete request.headers["x-revenuecat-etag"];
     delete request.headers["X-RevenueCat-ETag"];
     return { request };
   }
 
-  // Response phase
-  if (response.body) {
+  // Modify response
+  if (response && response.body) {
     try {
       const obj = JSON.parse(response.body);
       if (obj.subscriber) {
         obj.subscriber.subscriptions = obj.subscriber.subscriptions || {};
         obj.subscriber.entitlements = obj.subscriber.entitlements || {};
-        for (const i in list) {
-          if (new RegExp(`^${i}`, "i").test(ua)) {
-            obj.subscriber.subscriptions[list[i].id] = data;
-            obj.subscriber.entitlements[list[i].name] = JSON.parse(JSON.stringify(data));
-            obj.subscriber.entitlements[list[i].name].product_identifier = list[i].id;
+        for (const key in list) {
+          if (new RegExp(`^${key}`, "i").test(ua)) {
+            obj.subscriber.subscriptions[list[key].id] = data;
+            obj.subscriber.entitlements[list[key].name] = { ...data, product_identifier: list[key].id };
             break;
           }
         }
@@ -71,8 +69,8 @@ export default async function (request, response) {
           .replace(/"expires_date":"\w{4}/g, '"expires_date":"9999')
           .replace(/"period_type":"\w+"/g, '"period_type":"active"');
       }
-    } catch (e) {
-      console.log("RevenueCat script error:", e.message);
+    } catch (err) {
+      console.log("RevenueCat parse error:", err);
     }
   }
 
