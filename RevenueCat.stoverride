@@ -1,62 +1,20 @@
-#!desc=RevenueCat Instant Unlock (inline)
-#!homepage=https://example.com
-#!author=you
-#!icon=https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/icons/revenuecat.png
-name: RevenueCat Instant Unlock
-desc: Fake RevenueCat subscriptions (instant, inline script)
+#!name=Happy:Days
+#!desc=Happy:Days解锁会员
+#!homepage=https://whatshub.top
+#!author=yqc007
+#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/happydays.png
+name: Happy:Days
+desc: Happy:Days解锁会员
 http:
   mitm:
     - "api.revenuecat.com"
   script:
-    - match: ^https?:\/\/api\.revenuecat\.com\/v\d\/(receipts|subscribers)\/
-      type: request
-      require-body: false
-      timeout: 10
-      script: |
-        // request phase - remove ETag
-        export default async function(request, response) {
-          if (request && request.headers) {
-            delete request.headers["x-revenuecat-etag"];
-            delete request.headers["X-RevenueCat-ETag"];
-          }
-          return { request };
-        }
-
-    - match: ^https?:\/\/api\.revenuecat\.com\/v\d\/(receipts|subscribers)\/
+    - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/.{36}|subscribers\/\$RCAnonymousID%3A\w{32})$
+      name: Happy:Days1
       type: response
       require-body: true
       timeout: 10
-      script: |
-        // response phase - inject entitlement
-        export default async function(request, response) {
-          const ua = (request && (request.headers["User-Agent"] || request.headers["user-agent"])) || "";
-          const data = {
-            "expires_date": "2099-09-09T07:52:54Z",
-            "original_purchase_date": "2002-02-27T07:52:55Z",
-            "purchase_date": "2020-02-27T07:52:54Z",
-            "request_date": "2020-02-27T07:52:54Z"
-          };
-
-          if (response && response.body) {
-            try {
-              const obj = JSON.parse(response.body);
-              if (obj && obj.subscriber) {
-                // inject a generic entitlement for all apps (remove UA check)
-                obj.subscriber.subscriptions = obj.subscriber.subscriptions || {};
-                obj.subscriber.entitlements = obj.subscriber.entitlements || {};
-                const id = "com.generic.premium.yearly";
-                const entName = "premium";
-                obj.subscriber.subscriptions[id] = data;
-                obj.subscriber.entitlements[entName] = { ...data, product_identifier: id };
-                response.body = JSON.stringify(obj)
-                  .replace(/"expires_date":"\w{4}/g, '"expires_date":"9999')
-                  .replace(/"period_type":"\w+"/g, '"period_type":"active"');
-              }
-            } catch (e) {
-              console.log("RevenueCat parse error:", e);
-            }
-          }
-          return { response };
-        }
-
-script-providers: {}
+script-providers:
+  Happy:Days1:
+    url: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Javascript/revenuecat.js
+    interval: 86400
