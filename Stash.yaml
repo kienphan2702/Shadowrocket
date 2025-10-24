@@ -75,14 +75,6 @@ script-providers:
 rules:
   - GEOSITE,youtube,YouTube
   - MATCH,Revenuecat1
-  - DOMAIN,api.revenuecat.com,DIRECT
-  - DOMAIN-SUFFIX,revenuecat.com,DIRECT
-
-tun:
-  enable: true
-  stack: system
-  auto-route: true
-  auto-detect-interface: true
 
 dns:
   default-nameserver:
@@ -90,7 +82,6 @@ dns:
     - 1.1.1.1
   skip-cert-verify: true
   nameserver:
-    - https://dns.nextdns.io/a72ee5
 
 log-level: info
 mode: rule
