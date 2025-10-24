@@ -42,15 +42,24 @@ http:
       timeout: 10
       type: response
 
-    # 3. OldRoll
-    - argument: null
+    # 3. RevenueCatDeleteHeader (xoá header gửi lên RevenueCat)
+    - name: RevenueCatDeleteHeader
+      type: request
+      match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$)
       binary-mode: true
-      match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+      argument: null
       max-size: null
-      name: Revenuecat
-      require-body: true
-      timeout: 10
+      timeout: 60
+
+    # 4. OldRoll
+    - name: OldRoll
       type: response
+      match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+      require-body: true
+      binary-mode: true
+      argument: null
+      max-size: 0
+      timeout: 60
 
   rewrite:
     - '(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302'
@@ -66,9 +75,12 @@ script-providers:
   Revenuecat:
     url: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/refs/heads/main/Javascript/revenuecat.js
     interval: 86400
+  RevenueCatDeleteHeader:
+    url: https://raw.githubusercontent.com/ddgksf2013/Scripts/master/deleteHeader.js
+    interval: 86400
   OldRoll:
     url: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Javascript/oldroll.js
-    interval: 86400
+    interval: -1
 
 rules:
   - GEOSITE,youtube,YouTube
