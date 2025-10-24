@@ -1,4 +1,4 @@
-#!desc=RevenueCat Instant Unlock
+#!desc=RevenueCat Instant Unlock (inline)
 #!homepage=https://example.com
 #!author=yourname
 #!icon=https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/icons/revenuecat.png
@@ -9,26 +9,25 @@ http:
     - "api.revenuecat.com"
   script:
     - match: ^https?:\/\/api\.revenuecat\.com\/v\d\/(receipts|subscribers)\/
-      name: RevenueCatRequest
       type: request
       require-body: false
       timeout: 10
       script: |
-        // Remove ETag to avoid 304 responses
+        // Remove ETag to avoid 304 responses (request phase)
         export default async function (request, response) {
-          if (!response && request && request.headers) {
+          if (request && request.headers) {
             delete request.headers["x-revenuecat-etag"];
             delete request.headers["X-RevenueCat-ETag"];
           }
-          return { request, response };
+          return { request };
         }
+
     - match: ^https?:\/\/api\.revenuecat\.com\/v\d\/(receipts|subscribers)\/
-      name: RevenueCatResponse
       type: response
       require-body: true
       timeout: 10
       script: |
-        // RevenueCat response modifier (inline, Stash-compatible)
+        // RevenueCat response modifier (response phase)
         export default async function (request, response) {
           const ua = (request && (request.headers["User-Agent"] || request.headers["user-agent"])) || "";
           const list = {
@@ -80,6 +79,7 @@ http:
               if (obj && obj.subscriber) {
                 obj.subscriber.subscriptions = obj.subscriber.subscriptions || {};
                 obj.subscriber.entitlements = obj.subscriber.entitlements || {};
+                // Apply default entitlement matching UA; if you want to apply to all, remove UA check
                 for (const key in list) {
                   try {
                     if (new RegExp(`^${key}`, "i").test(ua)) {
@@ -99,7 +99,6 @@ http:
               console.log("RevenueCat parse error:", err);
             }
           }
-
           return { response };
         }
 
