@@ -1,7 +1,5 @@
 proxy-providers: {}
-
 proxies: []
-
 proxy-groups:
   - name: YouTube
     type: select
@@ -12,7 +10,7 @@ proxy-groups:
     proxies:
       - DIRECT
 
-# HTTP engine / script engine
+# HTTP engine
 http:
   mitm:
     - redirector*.googlevideo.com
@@ -21,64 +19,55 @@ http:
     - "s.youtube.com"
     - "youtubei.googleapis.com"
     - "api.revenuecat.com"
-    - "buy.itunes.apple.com"
 
 script:
-  # 1. YouTube chặn quảng cáo
-  - name: YouTubeNoAds
-    type: response
+  # 1. Script chặn quảng cáo YouTube
+  - argument: null
+    binary-mode: true
     match: ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/(v\d+\/)?(player|browse|next|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch)
-    require-body: true
-    binary-mode: true
-    argument: null
     max-size: null
+    name: YouTubeNoAds
+    require-body: true
     timeout: 10
-
-  # 2. Revenuecat (fake sub Premium)
-  - name: Revenuecat
     type: response
+
+  # 2. Script Revenuecat (fake sub để unlock Premium)
+  - argument: null
+    binary-mode: true
     match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$)
-    require-body: true
-    binary-mode: true
-    argument: null
-    max-size: -1          # khớp với max-size=-1 trong Shadowrocket. :contentReference[oaicite:4]{index=4}
-    timeout: 60
-
-  # 3. RevenueCatDeleteHeader (xoá header gửi lên RevenueCat)
-  - name: RevenueCatDeleteHeader
-    type: request         # tương đương type=http-request trong Shadowrocket. :contentReference[oaicite:5]{index=5}
-    match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers)
-    binary-mode: true
-    argument: null
     max-size: null
-    timeout: 60
-
-  # 4. OldRoll (fake verifyReceipt từ App Store)
-  - name: OldRoll
-    type: response        # tương đương type=http-response. :contentReference[oaicite:6]{index=6}
-    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    name: Revenuecat
     require-body: true
+    timeout: 10
+    type: response
+    rewrite:
+      - '(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302'
+      - '^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad - reject-200'
+      - '^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads - reject-200'
+      - '^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - reject-200'
+      - '^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext - reject-200'
+
+  # 3. OldRoll — script để bắt verifyReceipt (theo yêu cầu của bạn)
+  - argument: null
     binary-mode: true
-    argument: null
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt
     max-size: 0
-    timeout: 60
+    name: OldRoll
+    require-body: true
+    timeout: 10
+    type: http-response
+    # (script-path được cung cấp qua script-providers bên dưới)
 
 script-providers:
   YouTubeNoAds:
     url: https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js
     interval: 86400
-
   Revenuecat:
-    url: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Javascript/revenuecat.js
+    url: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/refs/heads/main/Javascript/revenuecat.js
     interval: 86400
-
-  RevenueCatDeleteHeader:
-    url: https://raw.githubusercontent.com/ddgksf2013/Scripts/master/deleteHeader.js
-    interval: 86400
-
   OldRoll:
     url: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Javascript/oldroll.js
-    interval: -1          # khớp script-update-interval=-1 bạn dùng cho OldRoll. :contentReference[oaicite:7]{index=7}
+    interval: -1
 
 rules:
   - GEOSITE,youtube,YouTube
