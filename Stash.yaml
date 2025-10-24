@@ -75,6 +75,7 @@ script-providers:
 rules:
   - GEOSITE,youtube,YouTube
   - MATCH,Revenuecat1
+  - DOMAIN,api.revenuecat.com,DIRECT
 
 dns:
   default-nameserver:
