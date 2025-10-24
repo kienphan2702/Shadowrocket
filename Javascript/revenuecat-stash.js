@@ -1,4 +1,3 @@
-// revenuecat-stash.js — Stash compatible, clean version
 export default async function (request, response) {
   const ua = request.headers["User-Agent"] || request.headers["user-agent"] || "";
   const list = {
