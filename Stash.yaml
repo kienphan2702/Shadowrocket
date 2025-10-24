@@ -19,6 +19,7 @@ http:
     - "s.youtube.com"
     - "youtubei.googleapis.com"
     - "api.revenuecat.com"
+    - "buy.itunes.apple.com"
 
   script:
     # 1. Script chặn quảng cáo YouTube
@@ -41,6 +42,16 @@ http:
       timeout: 10
       type: response
 
+    # 3. OldRoll
+    - argument: null
+      binary-mode: true
+      match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+      max-size: null
+      name: Revenuecat
+      require-body: true
+      timeout: 10
+      type: response
+
   rewrite:
     - '(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302'
     - '^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad - reject-200'
@@ -54,6 +65,9 @@ script-providers:
     interval: 86400
   Revenuecat:
     url: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/refs/heads/main/Javascript/revenuecat.js
+    interval: 86400
+  OldRoll:
+    url: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Javascript/oldroll.js
     interval: 86400
 
 rules:
