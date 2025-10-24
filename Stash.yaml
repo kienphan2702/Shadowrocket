@@ -78,12 +78,6 @@ rules:
   - DOMAIN-SUFFIX,revenuecat.com,DIRECT
   - MATCH, Revenuecat
 
-tun:
-  enable: true
-  stack: system
-  auto-route: true
-  auto-detect-interface: true
-
 dns:
   default-nameserver:
     - 1.1.1.1
