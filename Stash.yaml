@@ -69,7 +69,7 @@ script-providers:
     url: https://raw.githubusercontent.com/ddgksf2013/Scripts/master/deleteHeader.js
     interval: 1
   OldRoll1:
-    url: https://raw.githubusercontent.com/yqc007/QuantumultX/master/OldRollFVIPCrack.js
+    url: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/refs/heads/main/Javascript/oldroll.js
     interval: 86400
 
 rules:
