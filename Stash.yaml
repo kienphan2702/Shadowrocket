@@ -67,7 +67,7 @@ script-providers:
     interval: 86400
   DeleteHeader:
     url: https://raw.githubusercontent.com/ddgksf2013/Scripts/master/deleteHeader.js
-    interval: 1
+    interval: 3600
   OldRoll1:
     url: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/refs/heads/main/Javascript/oldroll.js
     interval: 86400
