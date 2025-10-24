@@ -30,7 +30,7 @@ http:
       timeout: 10
 
     # 2. Script Revenuecat
-    - match: ^https?:\/\/api\.revenuecat\.com\/v\d\/(receipts|subscribers)\/
+    - match: ^https?:\/\/api\.revenuecat\.com\/
       name: Revenuecat
       type: response
       require-body: true
