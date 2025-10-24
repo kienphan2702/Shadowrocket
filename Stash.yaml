@@ -73,7 +73,8 @@ script-providers:
     interval: 86400
 
 rules:
-  - GEOSITE,youtube,YouTube
+  - DOMAIN-SUFFIX,youtube.com,YouTube
+  - DOMAIN-SUFFIX,googlevideo.com,YouTube
   - DOMAIN,api.revenuecat.com,DIRECT
   - DOMAIN-SUFFIX,revenuecat.com,DIRECT
   - MATCH,DIRECT
