@@ -34,7 +34,7 @@ http:
     # 2. Script Revenuecat (fake sub để unlock Premium)
     - argument: null
       binary-mode: true
-      match: ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers)\/
+      match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$)
       max-size: null
       name: Revenuecat
       require-body: true
