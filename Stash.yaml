@@ -19,6 +19,7 @@ http:
     - "s.youtube.com"
     - "youtubei.googleapis.com"
     - "api.revenuecat.com"
+    - "buy.itunes.apple.com"
 
   script:
     # 1. Script YouTube Premium
@@ -31,7 +32,13 @@ http:
 
     # 2. Script Revenuecat
     - match: https://api.revenuecat.com/v1/(receipts|subscribers)/*
-      name: Revenuecat
+      name: Revenuecat1
+      type: response
+      require-body: true
+      timeout: 10
+    # 3. OldRoll
+    - match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+      name: OldRoll1
       type: response
       require-body: true
       timeout: 10
@@ -47,13 +54,16 @@ script-providers:
   YouTubeNoAds:
     url: https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js
     interval: 86400
-  Revenuecat:
+  Revenuecat1:
     url: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/main/Javascript/revenuecat.js
+    interval: 86400
+  OldRoll1:
+    url: https://raw.githubusercontent.com/yqc007/QuantumultX/master/OldRollFVIPCrack.js
     interval: 86400
 
 rules:
   - GEOSITE,youtube,YouTube
-  - MATCH,Revenuecat
+  - MATCH,Revenuecat1
 
 dns:
   default-nameserver:
