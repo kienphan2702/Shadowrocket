@@ -33,14 +33,9 @@ http:
     # 2. Script Revenuecat
     - match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$)
       name: Revenuecat1
-      type: request
-      require-body: true
-      timeout: 10      
-
-    - match: ^https?:\/\/api\.revenuecat\.com\/v\d\/(receipts|subscribers)\/
-      name: Revenuecat2
       type: response
       require-body: true
+      binary-mode: true
       timeout: 10
       
     # 3. DeleteHeaderRevenueCat
@@ -80,7 +75,7 @@ script-providers:
 
 rules:
   - GEOSITE,youtube,YouTube
-  - MATCH,Revenuecat1,Revenuecat2,DeleteHeader
+  - MATCH,Revenuecat1
 
 dns:
   default-nameserver:
