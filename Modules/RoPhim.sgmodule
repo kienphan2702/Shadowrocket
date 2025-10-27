@@ -1,0 +1,9 @@
+#!name=RoX Ultimate
+#!desc=Ultimate patch for RoPhim
+#!author=dabeecao, hcsavn, hiepkimcdtk55
+
+[Script]
+ro x = type=http-response,pattern=api.rofilm.net||rophimapi.net,requires-body=1,max-size=0,binary-body-mode=0,debug=1,script-path= https://api.dabeecao.org/data/scripts/rox.user.js
+
+[MITM]
+hostname = api.rofilm.net, rophimapi.net
