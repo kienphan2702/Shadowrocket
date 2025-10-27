@@ -19,7 +19,6 @@ http:
     - "s.youtube.com"
     - "youtubei.googleapis.com"
     - "api.revenuecat.com"
-    - "buy.itunes.apple.com"
 
   script:
     # 1. Script YouTube Premium
@@ -45,11 +44,11 @@ http:
       timeout: 10
       
     # 4. OldRoll
-    - match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
-      name: OldRoll1
-      type: response
-      require-body: true
-      timeout: 10
+    # - match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    #  name: OldRoll1
+    #  type: response
+    #  require-body: true
+    #  timeout: 10
 
   rewrite:
     - '(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302'
