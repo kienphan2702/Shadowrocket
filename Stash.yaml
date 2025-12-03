@@ -1,6 +1,5 @@
 proxy-providers: {}
 proxies: []
-
 proxy-groups:
   - name: YouTube
     type: select
@@ -34,7 +33,6 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-
 http:
   mitm:
     - "-redirector*.googlevideo.com"
@@ -51,7 +49,6 @@ http:
     - "api.revenuecat.com"
     - "raw.githubusercontent.com"
     - "photos.adobe.io"
-
   script:
     # YouTube
     - match: ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch)
@@ -60,21 +57,18 @@ http:
       require-body: true
       binary-mode: true
       timeout: 10
-
     # Wink
     - match: ^https?:\/\/api-sub\.meitu\.com\/v2\/user\/vip_info_by_group\.json
       name: Wink1
       type: response
       require-body: true
       timeout: 10
-
     # Meitu XiuXiu
     - match: ^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/
       name: meituxiuxiu1
       type: response
       require-body: true
       timeout: 10
-
     # Spotify
     - match: ^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$
       name: smile_spotify
@@ -86,15 +80,13 @@ http:
       name: smile_spotify_json
       type: request
       timeout: 10
-
     # SoundCloud
     - match: ^https?:\/\/api-mobile\.soundcloud\.com\/configuration\/ios
       name: SoundCloudGo+1
       type: response
       require-body: true
       timeout: 10
-
-    # Locket
+    # RevenueCat
     - match: ^https?:\/\/api\.revenuecat\.com\/.*\/(receipts$|subscribers\/[^/]+$)
       name: revenuecat_response
       type: response
@@ -107,14 +99,12 @@ http:
       require-body: false
       binary-mode: false
       timeout: 120
-
     # Lightroom
     - match: ^https:\/\/photos\.adobe\.io\/v2\/accounts*
       name: LightRoom1
       type: response
       require-body: true
       timeout: 10
-
   rewrite:
     # YouTube rewrite rules
     - '(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302'
@@ -122,7 +112,6 @@ http:
     - '^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads - reject-200'
     - '^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - reject-200'
     - '^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext - reject-200'
-
 script-providers:
   YouTubequguanggao1:
     url: https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js
@@ -151,7 +140,6 @@ script-providers:
   LightRoom1:
     url: https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/lightroom.js
     interval: 86400
-
 rules:
   - GEOSITE,youtube,YouTube
   - DOMAIN,api-sub.meitu.com,Wink
@@ -161,12 +149,12 @@ rules:
   - DOMAIN-SUFFIX,api.revenuecat.com,Locket
   - DOMAIN,photos.adobe.io,LightRoom
   - MATCH,NightmarketServer
-
 dns:
   default-nameserver:
     - 114.114.114.114
     - 1.1.1.1
   skip-cert-verify: true
-
+  nameserver:
+    - https://dns.nextdns.io/a72ee5
 log-level: info
 mode: rule
