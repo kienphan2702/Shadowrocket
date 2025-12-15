@@ -29,6 +29,10 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
+  - name: OldRoll
+    type: select
+    proxies:
+      - DIRECT
   - name: NightmarketServer
     type: select
     proxies:
@@ -49,6 +53,7 @@ http:
     - "api.revenuecat.com"
     - "raw.githubusercontent.com"
     - "photos.adobe.io"
+    - "buy.itunes.apple.com"
   script:
     # YouTube
     - match: ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch)
@@ -105,6 +110,12 @@ http:
       type: response
       require-body: true
       timeout: 10
+    # OldRoll
+    - match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+      name: OldRoll1
+      type: response
+      require-body: true
+      timeout: 10
   rewrite:
     # YouTube rewrite rules
     - '(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302'
@@ -139,6 +150,9 @@ script-providers:
     interval: 86400
   LightRoom1:
     url: https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/lightroom.js
+    interval: 86400
+  OldRoll1:
+    url: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/refs/heads/main/Javascript/oldroll.js
     interval: 86400
 rules:
   - GEOSITE,youtube,YouTube
