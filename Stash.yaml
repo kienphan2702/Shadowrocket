@@ -108,7 +108,7 @@ http:
       timeout: 10
     # iTunes
     - match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
-      name: OldRoll1
+      name: iTunes1
       type: response
       require-body: true
       timeout: 10
