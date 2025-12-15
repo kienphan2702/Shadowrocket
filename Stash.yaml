@@ -29,7 +29,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-  - name: OldRoll
+  - name: iTunes
     type: select
     proxies:
       - DIRECT
@@ -106,7 +106,7 @@ http:
       type: response
       require-body: true
       timeout: 10
-    # OldRoll
+    # iTunes
     - match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
       name: OldRoll1
       type: response
@@ -147,8 +147,8 @@ script-providers:
   LightRoom1:
     url: https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/lightroom.js
     interval: 86400
-  OldRoll1:
-    url: https://raw.githubusercontent.com/kienphan2702/Shadowrocket/refs/heads/main/Javascript/oldroll.js
+  iTunes1:
+    url: https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
     interval: 86400
 rules:
   - GEOSITE,youtube,YouTube
