@@ -161,3 +161,4 @@ rules:
   - MATCH, DIRECT
 log-level: info
 mode: rule
+dns: {nameserver: ['https://dns.nextdns.io/64f226']}
