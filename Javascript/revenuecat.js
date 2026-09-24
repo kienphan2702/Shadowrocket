@@ -36,7 +36,7 @@ const list = {
 	'Binsoo': { name: 'annual', id: '$RCAnonymousID:2d4482fc40b140f8be9045943614edac' },
 	'FotMob': { name: 'FotMob+', id: 'fotmob_membership_1y' },
 	'Paste Keyboard': { name: '$rc_lifetime', id: 'com.tmsaeapp.copypastekeyboard.removeads' }
-	
+	'Neatnook': { name: 'com.neatnook.pro', id: 'com.neatnook.pro.forever' }
 };
 const data = {
 	"expires_date": "2099-09-09T07:52:54Z",
