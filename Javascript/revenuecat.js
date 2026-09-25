@@ -37,6 +37,7 @@ const list = {
 	'FotMob': { name: 'FotMob+', id: 'fotmob_membership_1y' },
 	'Paste Keyboard': { name: '$rc_lifetime', id: 'com.tmsaeapp.copypastekeyboard.removeads' }
 	'Neatnook': { name: 'com.neatnook.pro', id: 'com.neatnook.pro.forever' }
+	'ProCamera': { name: 'private_lightbox_entitlement&san_fran_entitlement&pro_camera_up_entitlement&procamera_full_entitlement', id: 'com.cocologics.ProCamera.Up.Yearly' }
 };
 const data = {
 	"expires_date": "2099-09-09T07:52:54Z",
